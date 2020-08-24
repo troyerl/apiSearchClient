@@ -1,12 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axiosRequest from './axiosRequest';
 
 function App() {
+  async function test () {
+    let testRes = await axiosRequest('keywords');
+    console.log(testRes);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Matts a loser. Thats all this website is for.
         </p>
@@ -18,6 +22,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={test}>Test</button>
       </header>
     </div>
   );
