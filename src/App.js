@@ -4,7 +4,8 @@ import axiosRequest from './axiosRequest';
 
 function App() {
   async function test () {
-    let testRes = await axiosRequest('keywords');
+    let test = ['Events']
+    let testRes = await axiosRequest(`search/${JSON.stringify(test)}`);
     console.log(testRes);
   }
 
